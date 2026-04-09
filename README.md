@@ -6,3 +6,5 @@ django, django-rest-framework
 config yaratasizlar.
 api degan app yaratasizlar.
 api va rest_framework ni installed_appsga qoshamiz.
+pip install flake8
+pip freeze > requirements.txt

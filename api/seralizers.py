@@ -8,4 +8,3 @@ class TelefonSeralizer(ModelSerializer):
 
         model = Telefon
         fields = ["id", "name"]
-

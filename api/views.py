@@ -3,7 +3,9 @@ from rest_framework import status
 from rest_framework.response import Response
 from .models import Telefon
 from .seralizers import TelefonSeralizer
+
 # Create your views here.
+
 
 class MyAPi(APIView):
 
@@ -18,8 +20,8 @@ class MyAPi(APIView):
             ser.save()
             name = ser.name
         msg = f"{name} telefon qo'shildi."
-        return Response({"message":msg})
-    
+        return Response({"message": msg})
+
     def put(self, request):
         try:
             new_name = request.data.get("new_name")
@@ -33,5 +35,3 @@ class MyAPi(APIView):
             return Response("kechirasiz telefon topilmadi.")
         except Exception as e:
             return Response("Nomalum xatolik: " + e)
-    
-    
